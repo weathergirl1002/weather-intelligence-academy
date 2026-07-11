@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather Intelligence Academy Certification</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #0f172a;
+        color: #f8fafc;
+        overflow: hidden;
+    }
+    .slide-container {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+    }
+    .slide {
+        display: none;
+        width: 100%;
+        height: 100%;
+        padding: 4rem 10%;
+        box-sizing: border-box;
+        flex-direction: column;
+        justify-content: center;
+        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    }
+    .slide.active {
+        display: flex;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    h1 {
+        font-size: 3.5rem;
+        color: #38bdf8;
+        margin-bottom: 0.5rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+        color: #7dd3fc;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid #38bdf8;
+        padding-bottom: 0.5rem;
+        display: inline-block;
+    }
+    h3 {
+        font-size: 1.8rem;
+        color: #bae6fd;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    p, li {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: #cbd5e1;
+    }
+    ul {
+        margin-top: 0.5rem;
+    }
+    li {
+        margin-bottom: 0.8rem;
+    }
+    .highlight {
+        color: #38bdf8;
+        font-weight: bold;
+    }
+    .box {
+        background-color: #334155;
+        padding: 1.5rem;
+        border-left: 5px solid #38bdf8;
+        border-radius: 4px;
+        margin-top: 1.5rem;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1.5rem;
+        background-color: #1e293b;
+    }
+    th, td {
+        border: 1px solid #475569;
+        padding: 1rem;
+        text-align: left;
+    }
+    th {
+        background-color: #334155;
+        color: #7dd3fc;
+    }
+    .nav-buttons {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        display: flex;
+        gap: 1rem;
+    }
+    button {
+        background-color: #0284c7;
+        color: white;
+        border: none;
+        padding: 0.8rem 1.5rem;
+        font-size: 1.2rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    button:hover {
+        background-color: #0369a1;
+    }
+    button:disabled {
+        background-color: #475569;
+        cursor: not-allowed;
+    }
+    .slide-number {
+        position: fixed;
+        bottom: 2.5rem;
+        left: 2rem;
+        font-size: 1.2rem;
+        color: #64748b;
+    }
+</style>
+</head>
+<body>
+
+<div class="slide-container">
+    
+    <!-- Title Slide -->
+    <div class="slide active">
+        <h1>Weather Intelligence Academy</h1>
+        <p style="font-size: 1.5rem; color: #94a3b8;">Data Partnerships Certification Program</p>
+        <p>Selling Weather Targeting as a holistic, omnichannel strategy — across DSPs, social, search, and DOOH.</p>
+        <div class="box">
+            <p><strong>Your Mission:</strong> Weather is one of the most universal, daily contextual signals shaping consumer behavior. Your job is to help advertisers see it that way — and apply it everywhere their media runs.</p>
+        </div>
+    </div>
+
+    <!-- Module 1 -->
+    <div class="slide">
+        <h2>Module 1: Psychology of Weather</h2>
+        <p>Weather is a proven neurological trigger—not a vague correlation. 90% of consumer decisions are made subconsciously.</p>
+        <ul>
+            <li><span class="highlight">84%</span> notice a difference in their mood.</li>
+            <li><span class="highlight">41%</span> feel inspired to try something new.</li>
+            <li><span class="highlight">52%</span> notice a change in their spending habits.</li>
+        </ul>
+        <h3>The Four Mindstates</h3>
+        <ul>
+            <li><strong>Creating:</strong> Spring/pleasant. High social energy, spontaneity, openness to trial.</li>
+            <li><strong>Relishing:</strong> Peak summer. Active, present, enjoying the moment.</li>
+            <li><strong>Cocooning:</strong> Cold, wet, dreary. Retreating inward, seeking comfort and delivery.</li>
+            <li><strong>Enduring:</strong> Harsh winter. Resilience mode, seeking safety and preparedness.</li>
+        </ul>
+        <div class="box">
+            <p><strong>Practical Exercise: The "Feel" Audit</strong><br>Identify three different weather conditions outside today. Name which of the four mindstates it maps to, and list two ways that mindstate affects purchase intent.</p>
+        </div>
+    </div>
+
+    <!-- Module 1: The Pitch Framework -->
+    <div class="slide">
+        <h2>Module 1: The 3-Step Proof Framework</h2>
+        <p>Transition advertisers from reactive to predictive marketing using this methodology:</p>
+        <ol>
+            <li><strong>Open With the Macro Stat:</strong> Lead with a category-level number they can’t argue with. <em>(e.g., "1 in 4 home insurance claims are weather-related.")</em></li>
+            <li><strong>Localize to Their Category/Data:</strong> Translate the macro stat into their exact vertical. Pair it with their own sales or claims data if possible.</li>
+            <li><strong>Name the Mindstate and the Move:</strong> Convert proof into action. Identify which of the four mindstates applies right now, and what channel/creative should activate against it.</li>
+        </ol>
+        <div class="box">
+            <p><strong>The Weather Multiplier Effect:</strong> Using weather signals to anticipate consumer behavior and drive action precisely when and where it matters most across the ecosystem.</p>
+        </div>
+    </div>
+
+    <!-- Module 2 -->
+    <div class="slide">
+        <h2>Module 2: Data & Trigger Methodology</h2>
+        <p>We are more than a forecaster; we are a <strong>Decision Intelligence Company</strong>. We are 4x more likely to be the most accurate forecaster than our next closest competitor.</p>
+        <ul>
+            <li><strong>Scale:</strong> ~100 TB of data ingested daily, including 400,000+ personal weather stations.</li>
+            <li><strong>Output:</strong> 25B+ personalized forecasts delivered daily with 99.95% infrastructure uptime.</li>
+        </ul>
+        <h3>The Three-Part Tech Stack</h3>
+        <ul>
+            <li><strong>GRAF:</strong> Our physics-based, high-precision modeling system.</li>
+            <li><strong>WxMix:</strong> An AI-optimized blend of 100+ global forecast models.</li>
+            <li><strong>Forecasts on Demand Engine:</strong> Delivers continuously refreshed, real-time conditions.</li>
+        </ul>
+        <p><strong>Human-Over-The-Loop (HOTL):</strong> 100+ meteorologists run in parallel with AI. AI handles scale and speed; humans provide judgment and accountability.</p>
+    </div>
+
+    <!-- Module 2: Triggers -->
+    <div class="slide">
+        <h2>Module 2: The Six Signal Categories</h2>
+        <table>
+            <tr>
+                <th>Signal Type</th>
+                <th>What It Answers</th>
+                <th>Examples</th>
+            </tr>
+            <tr>
+                <td><strong>Relative</strong></td>
+                <td>What does the weather feel like vs. normal?</td>
+                <td>Unseasonably warm, feels like spring. (Based on 40 yrs of data)</td>
+            </tr>
+            <tr>
+                <td><strong>Absolute</strong></td>
+                <td>What’s happening outside right now?</td>
+                <td>UV index 8–10, 68–71°F, wind > 49 MPH.</td>
+            </tr>
+            <tr>
+                <td><strong>Activity</strong></td>
+                <td>What are they doing?</td>
+                <td>Outdoor activity, food delivery, gardening.</td>
+            </tr>
+            <tr>
+                <td><strong>Health & Wellness</strong></td>
+                <td>How are they feeling physically?</td>
+                <td>OTC sinus sales, 7-day high flu risk.</td>
+            </tr>
+            <tr>
+                <td><strong>Product Purchase</strong></td>
+                <td>When will they buy?</td>
+                <td>Flea & tick sales, facial cream sales (NielsenIQ POS driven).</td>
+            </tr>
+            <tr>
+                <td><strong>Emotion</strong></td>
+                <td>What’s their mood?</td>
+                <td>Upbeat, hopeful, somber.</td>
+            </tr>
+        </table>
+        <div class="box">
+            <p><strong>Practical Exercise: Trigger Mapping</strong><br>Select five triggers from the Weather Catalog. Match each to an appropriate brand and explain why that category is the right choice for their KPI.</p>
+        </div>
+    </div>
+
+    <!-- Module 3 -->
+    <div class="slide">
+        <h2>Module 3: The Data Ecosystem</h2>
+        <p>Our signals activate across all inventory channels. One signal, every channel.</p>
+        <ul>
+            <li><strong>DSPs (Programmatic):</strong> Activated via curated Deal IDs or first-party segments. Available on The Trade Desk, DV360, Yahoo DSP, PulsePoint, etc.</li>
+            <li><strong>Social Media:</strong> Triggers are permissioned as Custom Audiences or Interests directly in Ads Manager (Meta, TikTok, Nextdoor). No new pixels needed.</li>
+            <li><strong>Search & YouTube:</strong> Permissioned via Customer Match audiences in Google Ads, refreshing daily as forecasts shift.</li>
+            <li><strong>DOOH:</strong> Activated within Vistar DSP by selecting Current Weather contexts for digital billboards.</li>
+            <li><strong>Retail Media & Audio:</strong> Deployed as audience layers within Walmart Connect, Instacart, Spotify, or Pandora.</li>
+        </ul>
+        <div class="box">
+            <p><strong>Practical Exercise: Ecosystem Navigation</strong><br>Map out the activation steps for a client running a DV360 Video campaign and a Meta Social campaign using a "Forecast High Pollen" trigger.</p>
+        </div>
+    </div>
+
+    <!-- Module 4 -->
+    <div class="slide">
+        <h2>Module 4: Vertical Playbooks</h2>
+        <ul>
+            <li><strong>CPG & Beauty:</strong> Cold weather drives heavy moisturizers. <em>Brand Win:</em> McCormick served grilling ads timed perfectly to outdoor cooking moments for massive brand lift.</li>
+            <li><strong>Pharma & Healthcare:</strong> Use 7-day Sustained High Flu (below-normal temps) to push OTC meds. <em>Brand Win:</em> Chloraseptic reached parents exactly when cold weather made kids vulnerable.</li>
+            <li><strong>Automotive:</strong> Target "Auto Buying Weather" for AWDs, or "Cocooning" for at-home accessory e-commerce. Extreme heat drives battery sales.</li>
+            <li><strong>Home & HVAC:</strong> High humidity freezes AC units; dry air drives humidifiers. <em>Brand Win:</em> STIHL leveraged weather conditions on social media to increase video completion rates.</li>
+            <li><strong>Travel & Tourism:</strong> Geo-conquesting! Promote sunny escapes to users currently experiencing freezing/dreary weather.</li>
+        </ul>
+    </div>
+
+    <!-- Module 4: Continued -->
+    <div class="slide">
+        <h2>Module 4: Vertical Playbooks (Cont.)</h2>
+        <ul>
+            <li><strong>Insurance:</strong> Severe weather warnings are natural moments to promote home/auto bundling <em>before</em> damage occurs.</li>
+            <li><strong>Telco & Entertainment:</strong> Severe weather supports hotspot messaging. The "Cocooning" mindstate is perfect for streaming bundles.</li>
+            <li><strong>QSR & Food Delivery:</strong> Food delivery orders spike <span class="highlight">30–40%</span> during inclement weather. 
+            <br><br><em>The specific trigger:</em> Orders surge when precipitation occurs alongside wind speeds of at least 5 mph, or when temperatures deviate more than 12°F from the monthly average.</li>
+        </ul>
+        <div class="box">
+            <p><strong>Practical Exercise: Vertical Pitch</strong><br>Draft a pitch for an agricultural client using the "Pesticides Sales Weather" trigger (which evaluates wind speed, temp, and humidity to prevent spray drift).</p>
+        </div>
+    </div>
+
+    <!-- Module 5 -->
+    <div class="slide">
+        <h2>Module 5: Measurement & Optimization</h2>
+        <p>Measuring true success goes beyond the click.</p>
+        <p>Advertisers should evaluate performance through brand lift studies, foot traffic studies, and <span class="highlight">weather-normalized sales lift</span>. This proves that the right context drove a real-world outcome, not just general seasonality.</p>
+        <h3>The Sell-Side Decisioning Process</h3>
+        <ol>
+            <li><strong>Alignment:</strong> Teams align on KPIs and targeting goals.</li>
+            <li><strong>Curation:</strong> Triggers are packaged with premium supply.</li>
+            <li><strong>Delivery:</strong> Deal IDs are passed to the buyer seat.</li>
+            <li><strong>Activation:</strong> The advertiser's team activates against the Deals.</li>
+            <li><strong>Optimization:</strong> Automated DSP reporting is sent to TWC, enabling supply-side optimizations throughout the flight.</li>
+        </ol>
+        <div class="box">
+            <p><strong>Practical Exercise: Optimization Scenario</strong><br>A campaign using the "Sunscreen Purchase Intent" trigger (fires when 2+ sunny/high UV days are forecasted) is underperforming. List three in-flight optimization strategies you would request.</p>
+        </div>
+    </div>
+
+    <!-- Module 6 -->
+    <div class="slide">
+        <h2>Module 6: The Pitch</h2>
+        <h3>Structuring the Narrative</h3>
+        <ul>
+            <li><strong>The Premium Anchor:</strong> Lead with our O&O properties. 300M+ monthly users, the #1 downloaded weather app, and the #6 most trusted brand in the U.S. Our audience is primed to purchase.</li>
+            <li><strong>The Omnichannel Extension:</strong> Position our off-site data solutions as the scale and frequency driver across DSPs, Social, Search, CTV, Audio, and DOOH.</li>
+        </ul>
+        <h3>Handling Objections</h3>
+        <ul>
+            <li><strong>"We target by ZIP code."</strong><br>ZIP codes are static; our data is dynamic. 60°F in Miami requires a different message than 60°F in Seattle. Our Relative triggers adjust based on 40+ years of local historical norms.</li>
+            <li><strong>"We're worried about scale."</strong><br>We blend signal types (Purchase + Emotion + Relative) to prevent over-segmentation. Plus, our data is privacy-first and cookieless, ensuring maximum reach across browsers and devices.</li>
+        </ul>
+        <div class="box">
+            <p><strong>Practical Exercise: Roleplay</strong><br>Partner with a colleague. One person acts as an advertiser worried about cookie deprecation. Pitch Weather Targeting's cookieless, real-world signal as the ultimate future-proof solution.</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="slide-number" id="slideNum">Slide 1 of 10</div>
+
+<div class="nav-buttons">
+    <button id="prevBtn" onclick="changeSlide(-1)" disabled>Previous</button>
+    <button id="nextBtn" onclick="changeSlide(1)">Next</button>
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    const slideNumText = document.getElementById('slideNum');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    function updateUI() {
+        slides.forEach((slide, index) => {
+            slide.classList.remove('active');
+            if (index === currentSlide) {
+                slide.classList.add('active');
+            }
+        });
+
+        slideNumText.innerText = `Slide ${currentSlide + 1} of ${totalSlides}`;
+        
+        prevBtn.disabled = currentSlide === 0;
+        nextBtn.disabled = currentSlide === totalSlides - 1;
+    }
+
+    function changeSlide(direction) {
+        currentSlide += direction;
+        if (currentSlide < 0) currentSlide = 0;
+        if (currentSlide >= totalSlides) currentSlide = totalSlides - 1;
+        updateUI();
+    }
+</script>
+
+</body>
+</html>
