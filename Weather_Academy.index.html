@@ -1,0 +1,372 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1">&lt;title&gt;Weather Intelligence Academy Certification&lt;/title&gt;</p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background-color: #0f172a;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: #f8fafc;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.slide-container {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>width: 100vw;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.slide {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 4rem 10%;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>box-sizing: border-box;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.slide.active {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>animation: fadeIn 0.5s ease-in-out;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes fadeIn {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>from { opacity: 0; transform: translateY(20px); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>to { opacity: 1; transform: translateY(0); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>h1 {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 3.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: #38bdf8;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-bottom: 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>h2 {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 2.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: #7dd3fc;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-bottom: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-bottom: 2px solid #38bdf8;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding-bottom: 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>display: inline-block;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>h3 {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 1.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: #bae6fd;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-top: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-bottom: 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>p, li {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 1.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>line-height: 1.6;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: #cbd5e1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>ul {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-top: 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>li {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-bottom: 0.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.highlight {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: #38bdf8;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.box {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background-color: #334155;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-left: 5px solid #38bdf8;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-top: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>table {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-collapse: collapse;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-top: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background-color: #1e293b;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>th, td {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border: 1px solid #475569;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>text-align: left;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>th {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background-color: #334155;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: #7dd3fc;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.nav-buttons {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>position: fixed;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>bottom: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>right: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>gap: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>button {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background-color: #0284c7;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 0.8rem 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 1.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>transition: background-color 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>button:hover {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background-color: #0369a1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>button:disabled {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background-color: #475569;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>cursor: not-allowed;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.slide-number {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>position: fixed;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>bottom: 2.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>left: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 1.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: #64748b;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="slide-container"&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Title Slide --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="slide active"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;Weather Intelligence Academy&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p style="font-size: 1.5rem; color: #94a3b8;"&gt;Data Partnerships Certification Program&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Selling Weather Targeting as a holistic, omnichannel strategy — across DSPs, social, search, and DOOH.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;&lt;strong&gt;Your Mission:&lt;/strong&gt; Weather is one of the most universal, daily contextual signals shaping consumer behavior. Your job is to help advertisers see it that way — and apply it everywhere their media runs.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Module 1 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="slide"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Module 1: Psychology of Weather&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Weather is a proven neurological trigger—not a vague correlation. 90% of consumer decisions are made subconsciously.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;span class="highlight"&gt;84%&lt;/span&gt; notice a difference in their mood.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;span class="highlight"&gt;41%&lt;/span&gt; feel inspired to try something new.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;span class="highlight"&gt;52%&lt;/span&gt; notice a change in their spending habits.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;The Four Mindstates&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;Creating:&lt;/strong&gt; Spring/pleasant. High social energy, spontaneity, openness to trial.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;Relishing:&lt;/strong&gt; Peak summer. Active, present, enjoying the moment.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;Cocooning:&lt;/strong&gt; Cold, wet, dreary. Retreating inward, seeking comfort and delivery.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;Enduring:&lt;/strong&gt; Harsh winter. Resilience mode, seeking safety and preparedness.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;&lt;strong&gt;Practical Exercise: The "Feel" Audit&lt;/strong&gt;&lt;br&gt;Identify three different weather conditions outside today. Name which of the four mindstates it maps to, and list two ways that mindstate affects purchase intent.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Module 1: The Pitch Framework --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="slide"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Module 1: The 3-Step Proof Framework&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Transition advertisers from reactive to predictive marketing using this methodology:&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ol&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;Open With the Macro Stat:&lt;/strong&gt; Lead with a category-level number they can’t argue with. &lt;em&gt;(e.g., "1 in 4 home insurance claims are weather-related.")&lt;/em&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;Localize to Their Category/Data:&lt;/strong&gt; Translate the macro stat into their exact vertical. Pair it with their own sales or claims data if possible.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;Name the Mindstate and the Move:&lt;/strong&gt; Convert proof into action. Identify which of the four mindstates applies right now, and what channel/creative should activate against it.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ol&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;&lt;strong&gt;The Weather Multiplier Effect:&lt;/strong&gt; Using weather signals to anticipate consumer behavior and drive action precisely when and where it matters most across the ecosystem.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Module 2 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="slide"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Module 2: Data &amp; Trigger Methodology&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;We are more than a forecaster; we are a &lt;strong&gt;Decision Intelligence Company&lt;/strong&gt;. We are 4x more likely to be the most accurate forecaster than our next closest competitor.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;Scale:&lt;/strong&gt; ~100 TB of data ingested daily, including 400,000+ personal weather stations.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;Output:&lt;/strong&gt; 25B+ personalized forecasts delivered daily with 99.95% infrastructure uptime.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;The Three-Part Tech Stack&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;GRAF:&lt;/strong&gt; Our physics-based, high-precision modeling system.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;WxMix:&lt;/strong&gt; An AI-optimized blend of 100+ global forecast models.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;Forecasts on Demand Engine:&lt;/strong&gt; Delivers continuously refreshed, real-time conditions.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;&lt;strong&gt;Human-Over-The-Loop (HOTL):&lt;/strong&gt; 100+ meteorologists run in parallel with AI. AI handles scale and speed; humans provide judgment and accountability.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Module 2: Triggers --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="slide"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Module 2: The Six Signal Categories&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;th&gt;Signal Type&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;th&gt;What It Answers&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;th&gt;Examples&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;td&gt;&lt;strong&gt;Relative&lt;/strong&gt;&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;td&gt;What does the weather feel like vs. normal?&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;td&gt;Unseasonably warm, feels like spring. (Based on 40 yrs of data)&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;td&gt;&lt;strong&gt;Absolute&lt;/strong&gt;&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;td&gt;What’s happening outside right now?&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;td&gt;UV index 8–10, 68–71°F, wind &gt; 49 MPH.&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;td&gt;&lt;strong&gt;Activity&lt;/strong&gt;&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;td&gt;What are they doing?&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;td&gt;Outdoor activity, food delivery, gardening.&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;td&gt;&lt;strong&gt;Health &amp; Wellness&lt;/strong&gt;&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;td&gt;How are they feeling physically?&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;td&gt;OTC sinus sales, 7-day high flu risk.&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;td&gt;&lt;strong&gt;Product Purchase&lt;/strong&gt;&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;td&gt;When will they buy?&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;td&gt;Flea &amp; tick sales, facial cream sales (NielsenIQ POS driven).&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;td&gt;&lt;strong&gt;Emotion&lt;/strong&gt;&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;td&gt;What’s their mood?&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;td&gt;Upbeat, hopeful, somber.&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;&lt;strong&gt;Practical Exercise: Trigger Mapping&lt;/strong&gt;&lt;br&gt;Select five triggers from the Weather Catalog. Match each to an appropriate brand and explain why that category is the right choice for their KPI.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Module 3 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="slide"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Module 3: The Data Ecosystem&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Our signals activate across all inventory channels. One signal, every channel.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;DSPs (Programmatic):&lt;/strong&gt; Activated via curated Deal IDs or first-party segments. Available on The Trade Desk, DV360, Yahoo DSP, PulsePoint, etc.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;Social Media:&lt;/strong&gt; Triggers are permissioned as Custom Audiences or Interests directly in Ads Manager (Meta, TikTok, Nextdoor). No new pixels needed.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;Search &amp; YouTube:&lt;/strong&gt; Permissioned via Customer Match audiences in Google Ads, refreshing daily as forecasts shift.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;DOOH:&lt;/strong&gt; Activated within Vistar DSP by selecting Current Weather contexts for digital billboards.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;Retail Media &amp; Audio:&lt;/strong&gt; Deployed as audience layers within Walmart Connect, Instacart, Spotify, or Pandora.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;&lt;strong&gt;Practical Exercise: Ecosystem Navigation&lt;/strong&gt;&lt;br&gt;Map out the activation steps for a client running a DV360 Video campaign and a Meta Social campaign using a "Forecast High Pollen" trigger.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Module 4 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="slide"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Module 4: Vertical Playbooks&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;CPG &amp; Beauty:&lt;/strong&gt; Cold weather drives heavy moisturizers. &lt;em&gt;Brand Win:&lt;/em&gt; McCormick served grilling ads timed perfectly to outdoor cooking moments for massive brand lift.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;Pharma &amp; Healthcare:&lt;/strong&gt; Use 7-day Sustained High Flu (below-normal temps) to push OTC meds. &lt;em&gt;Brand Win:&lt;/em&gt; Chloraseptic reached parents exactly when cold weather made kids vulnerable.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;Automotive:&lt;/strong&gt; Target "Auto Buying Weather" for AWDs, or "Cocooning" for at-home accessory e-commerce. Extreme heat drives battery sales.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;Home &amp; HVAC:&lt;/strong&gt; High humidity freezes AC units; dry air drives humidifiers. &lt;em&gt;Brand Win:&lt;/em&gt; STIHL leveraged weather conditions on social media to increase video completion rates.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;Travel &amp; Tourism:&lt;/strong&gt; Geo-conquesting! Promote sunny escapes to users currently experiencing freezing/dreary weather.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Module 4: Continued --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="slide"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Module 4: Vertical Playbooks (Cont.)&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;Insurance:&lt;/strong&gt; Severe weather warnings are natural moments to promote home/auto bundling &lt;em&gt;before&lt;/em&gt; damage occurs.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;Telco &amp; Entertainment:&lt;/strong&gt; Severe weather supports hotspot messaging. The "Cocooning" mindstate is perfect for streaming bundles.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;QSR &amp; Food Delivery:&lt;/strong&gt; Food delivery orders spike &lt;span class="highlight"&gt;30–40%&lt;/span&gt; during inclement weather.<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;br&gt;&lt;br&gt;&lt;em&gt;The specific trigger:&lt;/em&gt; Orders surge when precipitation occurs alongside wind speeds of at least 5 mph, or when temperatures deviate more than 12°F from the monthly average.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;&lt;strong&gt;Practical Exercise: Vertical Pitch&lt;/strong&gt;&lt;br&gt;Draft a pitch for an agricultural client using the "Pesticides Sales Weather" trigger (which evaluates wind speed, temp, and humidity to prevent spray drift).&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Module 5 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="slide"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Module 5: Measurement &amp; Optimization&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Measuring true success goes beyond the click.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Advertisers should evaluate performance through brand lift studies, foot traffic studies, and &lt;span class="highlight"&gt;weather-normalized sales lift&lt;/span&gt;. This proves that the right context drove a real-world outcome, not just general seasonality.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;The Sell-Side Decisioning Process&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ol&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;Alignment:&lt;/strong&gt; Teams align on KPIs and targeting goals.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;Curation:&lt;/strong&gt; Triggers are packaged with premium supply.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;Delivery:&lt;/strong&gt; Deal IDs are passed to the buyer seat.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;Activation:&lt;/strong&gt; The advertiser's team activates against the Deals.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;Optimization:&lt;/strong&gt; Automated DSP reporting is sent to TWC, enabling supply-side optimizations throughout the flight.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ol&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;&lt;strong&gt;Practical Exercise: Optimization Scenario&lt;/strong&gt;&lt;br&gt;A campaign using the "Sunscreen Purchase Intent" trigger (fires when 2+ sunny/high UV days are forecasted) is underperforming. List three in-flight optimization strategies you would request.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Module 6 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="slide"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Module 6: The Pitch&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Structuring the Narrative&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;The Premium Anchor:&lt;/strong&gt; Lead with our O&amp;O properties. 300M+ monthly users, the #1 downloaded weather app, and the #6 most trusted brand in the U.S. Our audience is primed to purchase.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;The Omnichannel Extension:&lt;/strong&gt; Position our off-site data solutions as the scale and frequency driver across DSPs, Social, Search, CTV, Audio, and DOOH.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Handling Objections&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;"We target by ZIP code."&lt;/strong&gt;&lt;br&gt;ZIP codes are static; our data is dynamic. 60°F in Miami requires a different message than 60°F in Seattle. Our Relative triggers adjust based on 40+ years of local historical norms.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;"We're worried about scale."&lt;/strong&gt;&lt;br&gt;We blend signal types (Purchase + Emotion + Relative) to prevent over-segmentation. Plus, our data is privacy-first and cookieless, ensuring maximum reach across browsers and devices.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;&lt;strong&gt;Practical Exercise: Roleplay&lt;/strong&gt;&lt;br&gt;Partner with a colleague. One person acts as an advertiser worried about cookie deprecation. Pitch Weather Targeting's cookieless, real-world signal as the ultimate future-proof solution.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="slide-number" id="slideNum"&gt;Slide 1 of 10&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="nav-buttons"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button id="prevBtn" onclick="changeSlide(-1)" disabled&gt;Previous&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button id="nextBtn" onclick="changeSlide(1)"&gt;Next&lt;/button&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let currentSlide = 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const slides = document.querySelectorAll('.slide');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const totalSlides = slides.length;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const slideNumText = document.getElementById('slideNum');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const prevBtn = document.getElementById('prevBtn');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const nextBtn = document.getElementById('nextBtn');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function updateUI() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>slides.forEach((slide, index) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>slide.classList.remove('active');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (index === currentSlide) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>slide.classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>slideNumText.innerText = `Slide ${currentSlide + 1} of ${totalSlides}`;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>prevBtn.disabled = currentSlide === 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>nextBtn.disabled = currentSlide === totalSlides - 1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function changeSlide(direction) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>currentSlide += direction;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (currentSlide &lt; 0) currentSlide = 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (currentSlide &gt;= totalSlides) currentSlide = totalSlides - 1;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>updateUI();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
